@@ -1,0 +1,32 @@
+section.new-tweet {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 3px;
+}
+
+#tweet-text {
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom: 3px solid #545149;
+  background-color: #f4f1ec;
+  resize: none;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-family: 'Bungee', cursive;
+}
