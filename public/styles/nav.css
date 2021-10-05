@@ -1,0 +1,36 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+  top: 0%;
+  width: 100%;
+  height: 120px;
+  padding: 1.5em;
+  background-color: #4056A1;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+}
+
+#tweeter {
+  font-family: 'Bungee', cursive;
+}
+
+.fa-angle-double-down {
+  color: rgb(197, 22, 22)
+}
+
+/* removes the underline and color styling from the "write a new tweet" copy */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
