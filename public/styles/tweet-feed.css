@@ -6,12 +6,12 @@ section.tweet-feed {
 article.tweet-post {
   background-color: #f4f1ec;
   color: #545149;
-  padding: 1em;
+  padding: .5em;
   border: 3px solid #545149;
 }
 
 article.tweet-post:hover {
-  box-shadow: rgba(101, 101, 219, 0.76);
+  box-shadow: 0.5rem 0.5rem rgba(159, 159, 245, 0.322);
 }
 
 /* ------ */
@@ -21,6 +21,7 @@ article.tweet-post header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-left: .5em;
 }
 
 header div.tweet-user {
@@ -30,16 +31,29 @@ header div.tweet-user {
   align-items: center;
 }
 
+header p#username {
+  padding-right: .5em;
+  opacity: 0.3;
+}
+
+/* ICON */
 .fa-smile-beam {
   color: #545149;
-  padding: 12px;
+  padding-right: 12px;
 }
 
 /* ---- */
 /* BODY */
 /* ---- */
-article body.tweet-content p {
-  border: 3px solid #545149;
+p#tweet-content {
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom: 3px solid #545149;
+  height: 1.5em;
+  padding-left: .5em;
+  padding-bottom: 2.5em;
+  margin-bottom: .5px;
 }
 
 /* ------ */
@@ -49,6 +63,11 @@ article.tweet-post footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding-left: .5em;
+  font-size: 60%;
+  height: 32px;
+  margin: 2px;
 }
 
 /* ICONS */
