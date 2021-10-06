@@ -1,8 +1,9 @@
-.navigation {
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #FFFFFF;
+  background-color: #4056A1;
   overflow: hidden;
   position: fixed;
   z-index: 1;
