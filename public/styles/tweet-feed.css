@@ -1,0 +1,85 @@
+section.tweet-feed {
+  margin-top: 64px;
+  width: 100%;
+}
+
+article.tweet-post {
+  background-color: #f4f1ec;
+  color: #545149;
+  padding: 1em;
+  border: 3px solid #545149;
+}
+
+article.tweet-post:hover {
+  box-shadow: rgba(101, 101, 219, 0.76);
+}
+
+/* ------ */
+/* HEADER */
+/* ------ */
+article.tweet-post header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header div.tweet-user {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fa-smile-beam {
+  color: #545149;
+  padding: 12px;
+}
+
+/* ---- */
+/* BODY */
+/* ---- */
+article body.tweet-content p {
+  border: 3px solid #545149;
+}
+
+/* ------ */
+/* FOOTER */
+/* ------ */
+article.tweet-post footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* ICONS */
+footer div.icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fa-flag {
+  color: #4056A1;
+  padding: 5px;
+}
+
+.fa-retweet {
+  color: #4056A1;
+  padding: 5px;
+}
+
+.fa-heart {
+  color: #4056A1;
+  padding: 5px;
+}
+
+.fa-flag:hover {
+  color: rgb(146, 146, 67)
+}
+
+.fa-retweet:hover {
+  color: rgb(146, 146, 67)
+}
+
+.fa-heart:hover {
+  color: rgb(146, 146, 67)
+}
