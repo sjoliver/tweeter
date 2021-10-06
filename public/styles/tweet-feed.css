@@ -1,5 +1,5 @@
 section.tweet-feed {
-  margin-top: 64px;
+  margin-top: 24px;
   width: 100%;
 }
 
@@ -8,6 +8,9 @@ article.tweet-post {
   color: #545149;
   padding: .5em;
   border: 3px solid #545149;
+  transition: 0.4s;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;;
 }
 
 article.tweet-post:hover {
@@ -37,7 +40,7 @@ header p#username {
 }
 
 /* ICON */
-.fa-smile-beam {
+header div img {
   color: #545149;
   padding-right: 12px;
 }
