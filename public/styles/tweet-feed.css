@@ -50,9 +50,8 @@ p#tweet-content {
   border-left: none;
   border-top: none;
   border-bottom: 3px solid #545149;
-  height: 1.5em;
   padding-left: .5em;
-  padding-bottom: 2.5em;
+  padding-bottom: .5em;
   margin-bottom: .5px;
 }
 
