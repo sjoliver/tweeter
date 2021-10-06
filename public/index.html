@@ -20,6 +20,9 @@
     
     <!-- New-Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+   
+    <!-- Tweet-Feed CSS -->
+    <link rel="stylesheet" href="/styles/tweet-feed.css" type="text/css" />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -48,7 +51,7 @@
     </nav>
 
     <!-- Header (scrollable) -->
-    <header>
+    <header class="app-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -77,11 +80,24 @@
           <article class="tweet-post">
 
             <header>
-              <p>Hello I am header</p>
+              <div class="tweet-user">
+                <i class="far fa-smile-beam"></i>
+                <p>Frankie Doodle</p>
+              </div>
+              <p>@frankie_doodle</p>
             </header>
 
+            <body class="tweet-content">
+              <p>the text from the new tweet form</p>
+            </body>
+
             <footer>
-              <p>Howdy I am footer</p>
+              <p>69 days ago</p>
+              <div class="icons">
+                <i class="fas fa-flag"></i>
+                <i class="fas fa-retweet"></i>
+                <i class="fas fa-heart"></i>
+              </div>
             </footer>
 
           </article>
