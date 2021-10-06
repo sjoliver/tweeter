@@ -8,7 +8,6 @@
 
 $(document).ready(function() {
 
-
   const createTweetElement = function(tweetObject) {
 
     // HEADER
@@ -21,10 +20,11 @@ $(document).ready(function() {
     // CONTENT
     const $div = $(`<div></div>`);
     const $content = $(`<p id="tweet-content"><b>${tweetObject["content"]["text"]}</b></p>`);
-
+   
     // FOOTER
     const $footer = $(`<footer></footer>`);
-    const $createdAt = $(`<p><b>${tweetObject["created_at"]}</b></p>`);
+    const createdTime = timeago.format(tweetObject["created_at"]);
+    const $createdAt = $(`<p><b>${createdTime}</b></p>`);
     const $iconLinks = $(`
       <div class="icons">
         <i class="fas fa-flag"></i>
