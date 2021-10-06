@@ -49,11 +49,10 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.container {
+main.container {
   background-color: #f4f1ec;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 5%;
 }
-
