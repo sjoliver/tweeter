@@ -57,6 +57,7 @@ p#tweet-content {
   padding-bottom: .5em;
   margin-bottom: .5px;
   word-break: break-all;
+  height: auto;
 }
 
 /* ------ */
