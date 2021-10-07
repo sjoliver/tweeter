@@ -6,21 +6,38 @@
 
 $(document).ready(function () {
 
-  const $form = $(".tweet-form");
+  $('#error-container').hide();
+  console.log("document ready");
 
-  $form.on("submit", function(event) {
+  $(".tweet-form").on("submit", function(event) {
     event.preventDefault();
     console.log("Form was submitted");
 
     const data = $(this).serialize();
     const charCount = $('.counter').val();
 
+    let errorMessage = '';
+    $('#error-container').hide();
+
     if (charCount < 0) {
-      alert("Tweet exceeds max character count, please edit your tweet and try again.");
-    } else if (data === null || data === "text=") {
-      alert("Tweet cannot be empty, please enter text before submitting.");
-    } else if (charCount === 140) {
-      alert("Tweet cannot be empty, please enter text before submitting.");
+      errorMessage = "Tweet exceeds max character count, please edit your tweet and try again."
+      $('.error-message').text(errorMessage);
+      $('#error-container').show();
+      return;
+    }
+    
+    if (data === null || data === "text=") {
+      errorMessage = "Tweet cannot be empty, please enter text before submitting.";
+      $('.error-message').text(errorMessage);
+      $('#error-container').show();     
+      return;
+    }
+    
+    if (charCount === 140) {
+      errorMessage = "Tweet cannot be empty, please enter text before submitting."
+      $('.error-message').text(errorMessage);
+      $('#error-container').show();
+      return;
     }
 
     // POST REQUEST: processing form submission 
