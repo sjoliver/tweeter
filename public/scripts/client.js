@@ -30,16 +30,11 @@ $(document).ready(function () {
       dataType: 'text',
       contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
       data: $(this).serialize(),
-      success: (result) => {
-        $()
-
-
-        console.log(result);
-      },
-      error: (err) => {
-        console.log(`there was an error: ${err}`)
-      }
-    });
+    }).then((result) => {
+      console.log(result);
+    }).catch((error) => {
+      console.log(`there was an error: ${err}`);
+    })
 
   });
 
@@ -52,12 +47,10 @@ $(document).ready(function () {
       url: '/tweets',
       method: 'GET',
       dataType: 'json',
-      success: (data) => {
-        renderTweets(data);
-      },
-      error: (err) => {
-        console.log(`there was an error: ${err}`)
-      }
+    }).then((data) => {
+      renderTweets(data);
+    }).catch((error) => {
+      console.log(`there was an error: ${err}`);
     })
 
   };
