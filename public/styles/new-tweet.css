@@ -4,15 +4,22 @@ section.new-tweet {
 }
 
 #error-container {
+  display: flex;
+  align-content: center;
   color: red;
-  border: 1px solid red;
+  border: 2px solid red;
+  margin: auto;
   padding: .5em;
   width: fit-content;
 }
 
-form {
+.tweet-form {
   display: flex;
   flex-direction: column;
+}
+
+.tweet-form label {
+  margin-top: 1em;
 }
 
 button {
