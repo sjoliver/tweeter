@@ -6,6 +6,29 @@
 
 $(document).ready(function () {
 
+  const $form = $(".tweet-form");
+
+  $form.on("submit", function(event) {
+    event.preventDefault();
+    console.log("Form was submitted");
+
+    // const serialized = $(this).serialize();
+
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      dataType: 'text',
+      contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+      data: $(this).serialize(),
+      success: (result) => {
+        console.log(result);
+      },
+      error: (err) => {
+        console.log(`there was an error: ${err}`)
+      }
+    });
+  })
+
   // fake data from initial-tweets.json
   const data = [
     {
@@ -48,7 +71,6 @@ $(document).ready(function () {
 
       // calls createTweetElement for each tweet
       $tweet = createTweetElement(tweetObject);
-      console.log($tweet);
       $('.tweet-feed').append($tweet);
 
     };
