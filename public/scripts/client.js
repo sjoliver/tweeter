@@ -23,6 +23,7 @@ $(document).ready(function () {
       alert("Tweet cannot be empty, please enter text before submitting.");
     }
 
+    // POST REQUEST: processing form submission 
     $.ajax({
       url: '/tweets',
       method: 'POST',
@@ -30,12 +31,16 @@ $(document).ready(function () {
       contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
       data: $(this).serialize(),
       success: (result) => {
+        $()
+
+
         console.log(result);
       },
       error: (err) => {
         console.log(`there was an error: ${err}`)
       }
     });
+
   });
 
   // responsible for fetching tweets from /tweets
