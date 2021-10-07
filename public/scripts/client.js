@@ -6,8 +6,8 @@
 
 $(document).ready(function () {
 
+  // hides error container (div) 
   $('#error-container').hide();
-  console.log("document ready");
 
   $(".tweet-form").on("submit", function(event) {
     event.preventDefault();
@@ -16,12 +16,18 @@ $(document).ready(function () {
     const data = $(this).serialize();
     const charCount = $('.counter').val();
 
-    let errorMessage = '';
+    // hides error container on re-submit when message was previously rendered by the following form validation conditionals
     $('#error-container').hide();
+
+    let errorMessage = '';
 
     if (charCount < 0) {
       errorMessage = "Tweet exceeds max character count, please edit your tweet and try again."
+
+      // replaces text inside of the span element (which is inside of the error container div)
       $('.error-message').text(errorMessage);
+
+      // shows the full error element to user after invalid submission (contains above errorMessage)
       $('#error-container').show();
       return;
     }
