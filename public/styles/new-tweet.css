@@ -3,12 +3,11 @@ section.new-tweet {
   position: relative;
 }
 
-div.error {
+#error-container {
   color: red;
   border: 1px solid red;
   padding: .5em;
   width: fit-content;
-  display: none;
 }
 
 form {
