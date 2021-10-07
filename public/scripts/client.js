@@ -104,6 +104,12 @@ $(document).ready(function () {
   // createTweetElement: takes in a tweet object and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet
   const createTweetElement = function (tweetObject) {
     
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
     const createdTime = timeago.format(tweetObject["created_at"]);
     const $tweet = `<article class="tweet-post">
 
@@ -116,7 +122,7 @@ $(document).ready(function () {
     </header>
 
     <div>
-      <p id="tweet-content"><b>${tweetObject.content.text}</b></p>
+      <p id="tweet-content"><b>${escape(tweetObject.content.text)}</b></p>
     </div>
 
     <footer>
