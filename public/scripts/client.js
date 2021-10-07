@@ -28,21 +28,14 @@ $(document).ready(function () {
       $('.error-message').text(errorMessage);
 
       // shows the full error element to user after invalid submission (contains above errorMessage)
-      $('#error-container').show();
+      $('#error-container').slideDown(400);
       return;
     }
     
     if (data === null || data === "text=") {
       errorMessage = "Tweet cannot be empty, please enter text before submitting.";
       $('.error-message').text(errorMessage);
-      $('#error-container').show();     
-      return;
-    }
-    
-    if (charCount === 140) {
-      errorMessage = "Tweet cannot be empty, please enter text before submitting."
-      $('.error-message').text(errorMessage);
-      $('#error-container').show();
+      $('#error-container').slideDown(400);     
       return;
     }
 
