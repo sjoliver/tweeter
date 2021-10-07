@@ -7,11 +7,21 @@
 $(document).ready(function () {
 
   const $form = $(".tweet-form");
+
   $form.on("submit", function(event) {
     event.preventDefault();
     console.log("Form was submitted");
 
-    // const serialized = $(this).serialize();
+    const data = $(this).serialize();
+    const charCount = $('.counter').val();
+
+    if (charCount < 0) {
+      alert("Tweet exceeds max character count, please edit your tweet and try again.");
+    } else if (data === null || data === "text=") {
+      alert("Tweet cannot be empty, please enter text before submitting.");
+    } else if (charCount === 140) {
+      alert("Tweet cannot be empty, please enter text before submitting.");
+    }
 
     $.ajax({
       url: '/tweets',
