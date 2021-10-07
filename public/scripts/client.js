@@ -31,12 +31,32 @@ $(document).ready(function () {
       contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
       data: $(this).serialize(),
     }).then((result) => {
-      console.log(result);
+      loadTweet();
     }).catch((error) => {
-      console.log(`there was an error: ${err}`);
+      console.log(`there was an error: ${error}`);
     })
 
   });
+
+  // load a single tweet
+  const loadTweet = function() {
+
+    // use jQuery to make a request to /tweets 
+    // receive array of tweets as JSON
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+    }).then((data) => {
+      // access the last element in the data array -- last element is new tweet post object
+      const dataObj = data[data.length - 1];
+
+      // pass the dataObj as an array pp renderTweets loops through array only
+      renderTweets([dataObj]);
+    }).catch((error) => {
+      console.log(`there was an error: ${error}`);
+    })
+
+  };
 
   // responsible for fetching tweets from /tweets
   const loadTweets = function() {
@@ -50,7 +70,7 @@ $(document).ready(function () {
     }).then((data) => {
       renderTweets(data);
     }).catch((error) => {
-      console.log(`there was an error: ${err}`);
+      console.log(`there was an error: ${error}`);
     })
 
   };
