@@ -12,33 +12,6 @@ html {
 }
 
 /*
- * Media Queries from https://learnxinyminutes.com/docs/css/
- */
-
-/* A rule that will be used on all devices */
-h1 {
-  font-size: 2em;
-  color: white;
-  background-color: black;
-}
-
-/* change the h1 to use less ink on a printer */
-@media print {
-  h1 {
-    color: black;
-    background-color: white;
-  }
-}
-
-/* make the font bigger when shown on a screen at least 480px wide */
-@media screen and (min-width: 480px) {
-  h1 {
-    font-size: 3em;
-    font-weight: normal;
-  }
-}
-
-/*
  * Global layout stuff
  */
 
@@ -55,4 +28,42 @@ main.container {
   justify-content: center;
   flex-direction: column;
   margin: 5%;
+  padding: 1em;
+}
+
+/* ------------- */
+/* Media Queries */
+/* ------------- */
+
+/* change the h1 to use less ink on a printer */
+@media print {
+  h1 {
+    color: black;
+    background-color: white;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  header.app-header {
+    margin-top: 200px;
+    margin-left: 75px;
+    margin-right: 32px;
+    padding: 1em;
+    width: 33%;
+  }
+
+  main.container {
+    margin-top: 170px;
+    margin-left: 32px;
+    margin-right: 75px;
+    width: 66%;
+    padding: 0;
+  }
+
 }
