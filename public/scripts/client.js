@@ -6,6 +6,7 @@
 
 $(document).ready(function () {
 
+  // clicking on div in the navbar will put focus on the new-tweet text area
   $("div.icon").on("click", function (e) {
     $('#tweet-text').focus();
   })
@@ -15,7 +16,6 @@ $(document).ready(function () {
 
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
-    console.log("Form was submitted");
 
     const data = $(this).serialize();
     const charCount = $('.counter').val();
