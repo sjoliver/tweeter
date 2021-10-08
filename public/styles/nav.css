@@ -17,16 +17,26 @@ nav {
 
 #tweeter {
   font-family: 'Bungee', cursive;
+  font-size: 1.2em;
+}
+
+.icon p {
+  margin: 0;
 }
 
 .fa-angle-double-down {
-  color: rgb(197, 22, 22)
+  color: rgb(197, 22, 22);
+  padding-top: 10px;
+  animation: bounce 1s infinite alternate;
 }
 
-/* removes the underline and color styling from the "write a new tweet" copy */
-a {
-  color: white;
-  text-decoration: none;
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
 }
 
 .icon {
