@@ -7,9 +7,11 @@ Each tweet post contains a randomly-generated avatar, user name, and user handle
 
 ## Final Product
 
-### Desktop
+### Desktop View
+!["Desktop View"](https://github.com/sjoliver/tweeter/blob/master/public/images/desktop-view.png?raw=true)
 
-### Tablet
+### Tablet View
+!["Tablet View"](https://github.com/sjoliver/tweeter/blob/master/public/images/tablet-view.png?raw=true)
 
 ## Getting Started
 
@@ -23,4 +25,3 @@ Each tweet post contains a randomly-generated avatar, user name, and user handle
 - Node 5.10.x or above
 - Body-parser
 - Chance
-
