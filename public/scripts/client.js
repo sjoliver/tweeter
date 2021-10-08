@@ -6,14 +6,14 @@
 
 $(document).ready(function () {
 
-  $("div.icon").on("click", function(e) {
+  $("div.icon").on("click", function (e) {
     $('#tweet-text').focus();
   })
 
   // hides error container (div) 
   $('#error-container').hide();
 
-  $(".tweet-form").on("submit", function(event) {
+  $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
     console.log("Form was submitted");
 
@@ -35,11 +35,11 @@ $(document).ready(function () {
       $('#error-container').slideDown(400);
       return;
     }
-    
+
     if (data === null || data === "text=") {
       errorMessage = "Tweet cannot be empty, please enter text before submitting.";
       $('.error-message').text(errorMessage);
-      $('#error-container').slideDown(400);     
+      $('#error-container').slideDown(400);
       return;
     }
 
@@ -64,7 +64,7 @@ $(document).ready(function () {
   });
 
   // load a single tweet
-  const loadTweet = function() {
+  const loadTweet = function () {
 
     // use jQuery to make a request to /tweets 
     // receive array of tweets as JSON
@@ -84,7 +84,7 @@ $(document).ready(function () {
   };
 
   // responsible for fetching tweets from /tweets
-  const loadTweets = function() {
+  const loadTweets = function () {
 
     // use jQuery to make a request to /tweets 
     // receive array of tweets as JSON
@@ -128,7 +128,7 @@ $(document).ready(function () {
 
   // createTweetElement: takes in a tweet object and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet
   const createTweetElement = function (tweetObject) {
-    
+
     const escape = function (str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
