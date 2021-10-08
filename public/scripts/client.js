@@ -6,6 +6,10 @@
 
 $(document).ready(function () {
 
+  $("div.icon").on("click", function(e) {
+    $('#tweet-text').focus();
+  })
+
   // hides error container (div) 
   $('#error-container').hide();
 
@@ -51,6 +55,11 @@ $(document).ready(function () {
     }).catch((error) => {
       console.log(`there was an error: ${error}`);
     })
+
+    // clears textarea once user submits new tweet
+    $('#tweet-text').val('');
+    // resets counter back to 140 after textarea is cleared
+    $('.counter').val(140);
 
   });
 
